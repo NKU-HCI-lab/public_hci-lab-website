@@ -1,0 +1,151 @@
+{
+  "projects": [
+    {
+      "title": "Remote eye tracking",
+      "description": "Collecting and analyzing eye-tracking data without dedicated devices"
+    },
+    {
+      "title": "AI-driven mental health therapist",
+      "description": "Using generative AI to support individuals with communication disabilities"
+    },
+    {
+      "title": "Bidding behavior analysis",
+      "description": "Understanding auction and human dynamics through auction data"
+    },
+    {
+      "title": "Data viz in teaching evaluations",
+      "description": "Improving the user experience through better data and visualization"
+    },
+    {
+      "title": "Accessible resources for the blind",
+      "description": "Increasing accessibility of everyday technology to support special needs"
+    }
+  ],
+  
+  "currentStudents": [
+    {
+      "name": "Joseph Ampfer",
+      "description": "Full-stack development<br />Computer Science"
+    },
+    {
+      "name": "Bhuwan Bhandari",
+      "description": "Full-stack development<br />Computer Science"
+    },
+    {
+      "name": "Smaran Bhattarai",
+      "description": "Full-stack development<br />Computer Science"
+    },
+    {
+      "name": "Mackenzie Glaser",
+      "description": "L.I.F.E. Fellowship<br />Computer Science"
+    },
+    {
+      "name": "Tyler Egloff",
+      "description": "L.I.F.E. Fellowship<br />Computer Science"
+    },
+    {
+      "name": "Rita Ghimire",
+      "description": "Applied AI research<br />Computer Science"
+    },
+    {
+      "name": "Vickey Ghimire",
+      "description": "Data Analytics<br />Computer Science"
+    },
+    {
+      "name": "Elaina Hall",
+      "description": "L.I.F.E. Fellowship<br />Computer Science"
+    },
+    {
+      "name": "Rajani Kharki",
+      "description": "Data Analytics<br />Computer Science"
+    },
+    {
+      "name": "Sophia Kapszukiewicz",
+      "description": "L.I.F.E. Fellowship<br />Computer Science"
+    },
+    {
+      "name": "Olivia Kennedy",
+      "description": "Health technology<br />Biological Sciences"
+    },
+    {
+      "name": "Na Le",
+      "description": "Data visualization<br />Graphic design"
+    },
+    {
+      "name": "Priyanka Pandit",
+      "description": "Data Analytics<br />Computer Science"
+    }
+  ],
+  "formerStudents": [
+    {
+      "name": "Bikash Acharya",
+      "description": "Data Analytics<br />Computer Science"
+    },
+    {
+      "name": "Lulseged Admasu",
+      "description": "Full-stack development<br />Computer Science"
+    },
+    {
+      "name": "Seth Beesley",
+      "description": "Full-stack development<br />Applied Software Engineering"
+    },
+    {
+      "name": "My Doan",
+      "description": "User Experience<br />Marketing"
+    },
+    {
+      "name": "Cong Thien Ha Nguyen",
+      "description": "Large Language Models<br />Computer Science"
+    },
+    {
+      "name": "Aaditya Khanal",
+      "description": "Data Analytics<br />Data Science"
+    },
+    {
+      "name": "Chris King",
+      "description": "Client-side development<br />Software Engineering"
+    },
+    {
+      "name": "Oshan Maharjan",
+      "description": "Full-stack development<br />Computer Science"
+    },
+    {
+      "name": "Quentin Roa",
+      "description": "Tactile research<br />Applied Software Engineering"
+    },
+    {
+      "name": "Tong Ta",
+      "description": "Full-stack development<br />Computer Science"
+    },
+    {
+      "name": "Nga Phan",
+      "description": "Large Language Models<br />Computer Science"
+    },
+    {
+      "name": "Brett Thaman",
+      "description": "Full-stack development<br />Information Technology"
+    },
+    {
+      "name": "Anh Tran",
+      "description": "UR-STEM 2023 research<br />Data Science"
+    },
+    {
+      "name": "Gaurab Upreti",
+      "description": "Data analytics and visualization<br />Computer Science"
+    }
+  ],
+  "publications": [
+    {
+      "title": "Designing for Accessibility in HCI",
+      "authors": "Caporusso, N., Doe, J.",
+      "venue": "ACM SIGCHI Conference",
+      "year": 2023
+    },
+    {
+      "title": "Evaluating Eye Tracking Interfaces",
+      "authors": "Doe, J., Smith, A.",
+      "venue": "CHI Extended Abstracts",
+      "year": 2022
+    }
+  ]
+}
