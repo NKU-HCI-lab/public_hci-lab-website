@@ -23,6 +23,8 @@
   ],
   
   "currentStudents": [
+  ],
+  "formerStudents": [
     {
       "name": "Joseph Ampfer",
       "description": "Full-stack development<br />Computer Science"
@@ -74,9 +76,7 @@
     {
       "name": "Priyanka Pandit",
       "description": "Data Analytics<br />Computer Science"
-    }
-  ],
-  "formerStudents": [
+    },
     {
       "name": "Bikash Acharya",
       "description": "Data Analytics<br />Computer Science"
