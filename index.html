@@ -99,7 +99,39 @@
   <section id="join" class="bg-white py-5">
     <div class="container text-center">
       <h2 class="fw-bold">Join</h2>
-      <p>If you want to join, send an email to Dr. Nicholas Caporusso (<a href="mailto:caporusson1@nku.edu">caporusson1@nku.edu</a>).</p>
+
+      <div class="row justify-content-md-center text-start">
+        <div class="col-12 col-md-8">
+
+          <h4 class="fw-bold mt-4">Why join?</h4>
+          <ol>
+            <li><strong><em>Learn and work on interesting topics</em></strong>: no matter what we achieve together, you will learn something new and meaningful.</li>
+            <li><strong><em>Deliver results</em></strong>: we have a goal-oriented mindset that will provide you with meaningful personal and professional accomplishments.</li>
+            <li><strong><em>Connect and thrive</em></strong>: we work professionally, but in a relaxed environment.</li>
+          </ol>
+          <p>Have any questions? Read our <a href="https://github.com/NKU-HCI-lab/.github/blob/main/profile/pages/frequently-asked-questions.md" target="_blank">Frequently Asked Questions page</a>.</p>
+
+          <h4 class="fw-bold mt-4">What's expected from HCI Lab members</h4>
+          <p>The minimum expected weekly commitment is as follows:</p>
+          <ul>
+            <li><em>Research project</em>: 15 hours (full-time researcher) or 5 hours (part-time researcher)</li>
+            <li><em>Professional development</em>: 2-3 hours</li>
+            <li><em>Weekly lab meetings</em>: 1-2 hours</li>
+            <li><em>Other activities</em>: 1 hour</li>
+          </ul>
+
+          <h4 class="fw-bold mt-4">How to join</h4>
+          <p>First, you must <strong>fill out the <a href="https://forms.cloud.microsoft/r/xT9tW1iZkF" target="_blank" rel="noopener">member form</a></strong>.</p>
+          <p>After you get accepted into the lab, you:</p>
+          <ol>
+            <li>Should enroll in a research course: wait for further instructions from me</li>
+            <li>Will be assigned to a team/project based on your interests</li>
+          </ol>
+
+          <p class="mt-4">If you have further questions, send an email to Dr. Nicholas Caporusso (<a href="mailto:caporusson1@nku.edu">caporusson1@nku.edu</a>).</p>
+
+        </div>
+      </div>
     </div>
   </section>
 
@@ -122,9 +154,15 @@
             </div>`;
         });
 
+        // Sort students alphabetically by last name (last component of the name)
+        const lastName = name => name.trim().split(/\s+/).pop();
+        const byLastName = (a, b) =>
+          lastName(a.name).localeCompare(lastName(b.name), undefined, { sensitivity: 'base' })
+          || a.name.localeCompare(b.name, undefined, { sensitivity: 'base' });
+
         // Current Students
         const currentContainer = document.getElementById('current-students-container');
-        data.currentStudents.forEach(student => {
+        [...data.currentStudents].sort(byLastName).forEach(student => {
         student.image=student.name.toLowerCase().replace(/[^a-zA-Z]+/g, '') + '.jpg';
           currentContainer.innerHTML += `
             <div class="col-12 col-md-3">
@@ -140,7 +178,7 @@
 
         // Former Students (lazy)
         const formerContainer = document.getElementById('former-students-container');
-        data.formerStudents.forEach(student => {
+        [...data.formerStudents].sort(byLastName).forEach(student => {
         student.image=student.name.toLowerCase().replace(/[^a-zA-Z]+/g, '') + '.jpg';
           formerContainer.innerHTML += `
             <div class="col-6 col-md-2">
