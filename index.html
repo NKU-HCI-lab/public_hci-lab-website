@@ -1,220 +1,668 @@
 <!doctype html>
 <html lang="en">
 <head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Human-Computer Interaction lab</title>
-		<meta property="og:url" content="https://www.cprnhl.com/hcilab">
-		<meta property="og:type" content="article">
-		<meta property="og:title" content="Human-Computer Interaction lab">
-		<meta property="og:description" content="Human-Computer Interaction lab">
-		<meta property="og:image" content="https://nicholascaporusso.github.io/NKU-HCI-lab/assets/img/cover.jpg">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-		<style>
-			*{
-				font-family:"Poppins", sans-serif;
-				font-weight:400;
-				font-style:normal;
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Human-Computer Interaction Lab &middot; Northern Kentucky University</title>
+	<meta name="description" content="The Human-Computer Interaction Lab at Northern Kentucky University researches user experience, artificial intelligence, and assistive technology. Led by Dr. Nicholas Caporusso in Griffin Hall 342.">
+	<meta name="keywords" content="human-computer interaction, HCI lab, user experience research, artificial intelligence, large language models, assistive technology, eye tracking, accessibility, Northern Kentucky University, NKU, Nicholas Caporusso">
+	<meta name="author" content="Nicholas Caporusso">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+	<meta name="theme-color" content="#0f8f8f">
+	<meta name="color-scheme" content="light">
+	<link rel="canonical" href="https://www.cprnhl.com/hcilab/">
+
+	<!-- Open Graph (Facebook, LinkedIn, Slack, WhatsApp) -->
+	<meta property="og:site_name" content="HCI Lab &middot; Northern Kentucky University">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="https://www.cprnhl.com/hcilab/">
+	<meta property="og:title" content="Human-Computer Interaction Lab &middot; Northern Kentucky University">
+	<meta property="og:description" content="We explore new ways to understand and improve the interaction between people and technology - combining user experience research, artificial intelligence, and assistive technology.">
+	<meta property="og:image" content="https://www.cprnhl.com/hcilab/assets/img/social-card.jpg">
+	<meta property="og:image:secure_url" content="https://www.cprnhl.com/hcilab/assets/img/social-card.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:image:alt" content="Human-Computer Interaction Lab at Northern Kentucky University">
+
+	<!-- Twitter / X -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Human-Computer Interaction Lab &middot; Northern Kentucky University">
+	<meta name="twitter:description" content="Research on user experience, artificial intelligence, and assistive technology at Northern Kentucky University.">
+	<meta name="twitter:image" content="https://www.cprnhl.com/hcilab/assets/img/social-card.jpg">
+	<meta name="twitter:image:alt" content="Human-Computer Interaction Lab at Northern Kentucky University">
+
+	<!-- Icons -->
+	<link rel="icon" type="image/png" href="assets/img/logo-mark.png">
+	<link rel="apple-touch-icon" href="assets/img/logo-mark.png">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+	<style>
+		:root{
+			--teal:#0f8f8f;
+			--teal-600:#0b7275;
+			--teal-700:#095c5f;
+			--teal-50:#eaf6f6;
+			--teal-100:#d3ecec;
+			--green:#3fa96b;
+			--amber-50:#fdf3d4;
+			--ink:#12242a;
+			--body:#41565c;
+			--muted:#71868d;
+			--line:#e4eded;
+			--bg:#ffffff;
+			--surface:#f7fafa;
+			--radius:16px;
+			--shadow-sm:0 1px 2px rgba(18,36,42,.05),0 1px 3px rgba(18,36,42,.05);
+			--shadow-md:0 10px 30px -12px rgba(18,36,42,.18);
+			--nav-h:66px;
+		}
+		*{box-sizing:border-box}
+		html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 16px)}
+		body{
+			margin:0;
+			background:var(--bg);
+			color:var(--body);
+			font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+			font-size:16px;
+			line-height:1.65;
+			-webkit-font-smoothing:antialiased;
+		}
+		h1,h2,h3,h4,h5{
+			font-family:"Poppins",system-ui,sans-serif;
+			color:var(--ink);
+			letter-spacing:-.02em;
+			line-height:1.2;
+			margin:0 0 .6rem;
+		}
+		h1{font-size:clamp(2.1rem,4.6vw,3.3rem);font-weight:700}
+		h2{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:600}
+		h3{font-size:1.15rem;font-weight:600}
+		h4{font-size:1rem;font-weight:600}
+		p{margin:0 0 1rem}
+		a{color:var(--teal-600);text-decoration:none}
+		a:hover{text-decoration:underline}
+		img{max-width:100%;display:block}
+		.wrap{width:min(1120px,92vw);margin-inline:auto}
+		.narrow{width:min(760px,92vw);margin-inline:auto}
+		section{padding:clamp(56px,7vw,92px) 0}
+		.section-head{margin-bottom:2.5rem}
+		.eyebrow{
+			font-family:"Poppins",sans-serif;
+			font-size:.72rem;
+			font-weight:600;
+			letter-spacing:.14em;
+			text-transform:uppercase;
+			color:var(--teal);
+			margin:0 0 .5rem;
+		}
+		.lead{font-size:1.06rem;color:var(--body)}
+		.muted{color:var(--muted)}
+
+		/* ---------- nav ---------- */
+		.nav{
+			position:fixed;inset:0 0 auto 0;z-index:50;height:var(--nav-h);
+			background:rgba(255,255,255,.86);
+			backdrop-filter:saturate(180%) blur(12px);
+			border-bottom:1px solid var(--line);
+		}
+		.nav-inner{display:flex;align-items:center;gap:1rem;height:100%}
+		.brand{display:flex;align-items:center;gap:.6rem;font-family:"Poppins",sans-serif;font-weight:600;color:var(--ink);text-decoration:none}
+		.brand:hover{text-decoration:none}
+		.brand img{width:34px;height:34px;object-fit:contain}
+		.brand span{font-size:.98rem;letter-spacing:-.01em}
+		.nav-links{margin-left:auto;display:flex;align-items:center;gap:.35rem}
+		.nav-links a{
+			padding:.45rem .8rem;border-radius:9px;color:var(--body);
+			font-size:.92rem;font-weight:500;text-decoration:none;
+		}
+		.nav-links a:hover{background:var(--teal-50);color:var(--teal-700);text-decoration:none}
+		.nav-cta{
+			margin-left:.5rem;background:var(--teal);color:#fff !important;
+			padding:.5rem 1rem !important;border-radius:10px;
+		}
+		.nav-cta:hover{background:var(--teal-600) !important;color:#fff !important}
+		.nav-toggle{
+			display:none;margin-left:auto;background:none;border:1px solid var(--line);
+			border-radius:9px;padding:.4rem .6rem;color:var(--ink);cursor:pointer;font-size:1.1rem;line-height:1;
+		}
+		@media (max-width:860px){
+			.nav-toggle{display:block}
+			.nav-links{
+				position:absolute;top:var(--nav-h);left:0;right:0;display:none;
+				flex-direction:column;align-items:stretch;gap:0;padding:.5rem .6rem 1rem;
+				background:#fff;border-bottom:1px solid var(--line);box-shadow:var(--shadow-md);
 			}
-			h100{
-				min-height:100vh !important;
-			}
-			.bg-white{
-				background-color:#fff
-			}
-			.bg-gray{
-				background-color:#eee
-			}
-			h2{
-				font-size:3rem
-			}
-		</style>
-	</head>
+			.nav-links.open{display:flex}
+			.nav-links a{padding:.7rem .8rem}
+			.nav-cta{margin:.4rem 0 0;text-align:center}
+		}
+
+		/* ---------- hero ---------- */
+		.hero{
+			position:relative;overflow:hidden;text-align:center;
+			padding-top:calc(var(--nav-h) + clamp(48px,7vw,84px));
+			padding-bottom:clamp(48px,7vw,80px);
+		}
+		.hero::before{
+			content:"";position:absolute;inset:-30% 0 auto;height:660px;z-index:-1;
+			background:radial-gradient(58% 60% at 50% 40%,rgba(15,143,143,.13),rgba(63,169,107,.06) 45%,rgba(255,255,255,0) 72%);
+		}
+		.hero-logo{width:clamp(120px,16vw,164px);margin:0 auto 1.4rem}
+		.hero p.lead{font-size:1.12rem;margin-inline:auto;max-width:62ch}
+		.pill{
+			display:inline-flex;align-items:center;gap:.45rem;
+			background:var(--teal-50);color:var(--teal-700);
+			border:1px solid var(--teal-100);border-radius:999px;
+			padding:.35rem .85rem;font-size:.85rem;font-weight:500;
+		}
+		.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;margin-top:1.6rem}
+		.btn{
+			display:inline-flex;align-items:center;gap:.45rem;
+			font-family:"Poppins",sans-serif;font-size:.94rem;font-weight:500;
+			padding:.68rem 1.3rem;border-radius:11px;border:1px solid transparent;
+			cursor:pointer;text-decoration:none;transition:.18s ease;
+		}
+		.btn:hover{text-decoration:none;transform:translateY(-1px)}
+		.btn-primary{background:var(--teal);color:#fff}
+		.btn-primary:hover{background:var(--teal-600);color:#fff}
+		.btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+		.btn-ghost:hover{border-color:var(--teal-100);background:var(--teal-50);color:var(--teal-700)}
+		.stats{
+			display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(1.5rem,5vw,3.5rem);
+			margin-top:clamp(2.5rem,5vw,3.5rem);padding-top:2rem;border-top:1px solid var(--line);
+		}
+		.stat b{
+			display:block;font-family:"Poppins",sans-serif;font-size:1.9rem;
+			font-weight:700;color:var(--teal);line-height:1.1;
+		}
+		.stat span{font-size:.83rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
+		/* ---------- generic cards / grids ---------- */
+		.surface{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+		.grid{display:grid;gap:1.25rem}
+		.grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+		.grid-projects{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+		.card{
+			background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+			padding:1.6rem;box-shadow:var(--shadow-sm);transition:.2s ease;
+		}
+		.card-hover:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--teal-100)}
+		.card-icon{
+			width:84px;height:84px;border-radius:22px;background:var(--teal-50);
+			display:grid;place-items:center;margin-bottom:1.1rem;
+		}
+		.card-icon img{width:52px;height:52px;object-fit:contain}
+		.card p:last-child{margin-bottom:0}
+
+		/* ---------- projects ---------- */
+		.project-card{
+			position:relative;display:flex;flex-direction:column;
+			background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+			padding:1.6rem;box-shadow:var(--shadow-sm);transition:.2s ease;overflow:hidden;
+		}
+		.project-card::before{
+			content:"";position:absolute;inset:0 0 auto 0;height:3px;
+			background:linear-gradient(90deg,var(--teal),var(--green));
+			opacity:0;transition:.2s ease;
+		}
+		.project-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--teal-100)}
+		.project-card:hover::before{opacity:1}
+		.project-meta{
+			display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;
+			font-size:.8rem;color:var(--muted);margin-bottom:.85rem;
+		}
+		.project-meta b{
+			font-family:"Poppins",sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.02em;
+			color:var(--teal-700);background:var(--teal-50);border-radius:999px;padding:.15rem .6rem;
+		}
+		.project-card h3{margin-bottom:.6rem}
+		.project-card p{font-size:.93rem;color:var(--body)}
+		.project-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:auto;padding-top:1rem}
+		.project-tags span{
+			font-size:.76rem;color:var(--muted);border:1px solid var(--line);
+			border-radius:999px;padding:.15rem .6rem;background:var(--surface);
+		}
+
+		/* ---------- people ---------- */
+		.leads{display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:center;margin-bottom:3rem}
+		.lead-card{
+			display:flex;gap:1.2rem;align-items:center;text-align:left;
+			background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+			padding:1.1rem;box-shadow:var(--shadow-sm);max-width:420px;flex:1 1 320px;
+		}
+		.lead-card img{width:104px;height:118px;border-radius:12px;object-fit:cover;flex:none}
+		.lead-card h3{margin-bottom:.15rem}
+		.lead-card p{margin:0;font-size:.9rem;color:var(--muted)}
+		.people-grid{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fill,minmax(168px,1fr))}
+		.person{
+			background:#fff;border:1px solid var(--line);border-radius:14px;
+			overflow:hidden;box-shadow:var(--shadow-sm);transition:.2s ease;
+		}
+		.person:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+		.person img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--teal-50)}
+		.person .info{padding:.75rem .85rem .9rem}
+		.person h4{font-size:.94rem;margin:0 0 .15rem}
+		.person p{margin:0;font-size:.79rem;color:var(--muted);line-height:1.45}
+		.people-grid.former{grid-template-columns:repeat(auto-fill,minmax(132px,1fr))}
+		.people-grid.former h4{font-size:.85rem}
+		.subhead{
+			display:flex;flex-wrap:wrap;align-items:baseline;gap:.75rem;
+			margin:0 0 1.25rem;padding-bottom:.75rem;border-bottom:1px solid var(--line);
+		}
+		.subhead h3{margin:0}
+		.subhead .muted{font-size:.87rem}
+		.empty{
+			border:1px dashed var(--line);border-radius:var(--radius);
+			padding:1.5rem;text-align:center;color:var(--muted);font-size:.92rem;
+		}
+		.toggle-btn{
+			background:#fff;border:1px solid var(--line);border-radius:10px;
+			padding:.45rem .9rem;font:inherit;font-size:.87rem;color:var(--ink);cursor:pointer;
+		}
+		.toggle-btn:hover{border-color:var(--teal-100);background:var(--teal-50);color:var(--teal-700)}
+		.hidden{display:none}
+
+		/* ---------- publications ---------- */
+		.pub-controls{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.1rem}
+		.chip{
+			background:#fff;border:1px solid var(--line);border-radius:999px;
+			padding:.4rem .95rem;font:inherit;font-size:.86rem;color:var(--body);cursor:pointer;transition:.15s ease;
+		}
+		.chip:hover{border-color:var(--teal-100);background:var(--teal-50);color:var(--teal-700)}
+		.chip.active{background:var(--teal);border-color:var(--teal);color:#fff}
+		.chip.active .muted{color:rgba(255,255,255,.72)}
+		.pub-legend{
+			display:flex;flex-wrap:wrap;align-items:center;gap:1.2rem;
+			font-size:.82rem;color:var(--muted);margin:0 0 2rem;
+		}
+		.pub-legend i{font-style:normal;padding:.05rem .35rem;border-radius:4px;margin-right:.4rem;box-shadow:none}
+		.pub-year{margin-bottom:2.4rem}
+		.pub-year > h3{
+			display:flex;align-items:center;gap:1rem;font-size:1.05rem;color:var(--teal-700);
+			margin-bottom:.9rem;
+		}
+		.pub-year > h3::after{content:"";flex:1;height:1px;background:var(--line);order:3}
+		.pub-year-count{
+			order:2;flex:none;background:#fff;border:1px solid var(--line);border-radius:999px;
+			padding:.1rem .6rem;font-family:"Inter",sans-serif;font-size:.72rem;
+			font-weight:500;letter-spacing:0;color:var(--muted);white-space:nowrap;
+		}
+		.pub-year ol{margin:0;padding-left:1.9rem}
+		.pub-year li{margin-bottom:.9rem;padding-left:.3rem;font-size:.95rem}
+		.pub-year li::marker{color:var(--muted);font-size:.85rem}
+		.pub-title{font-weight:500;color:var(--ink)}
+		a.pub-title:hover{color:var(--teal-600)}
+		.pub-venue{color:var(--muted)}
+		.author-pi,.author-student{border-radius:4px}
+		.author-pi{background:var(--teal-50);box-shadow:0 0 0 3px var(--teal-50);color:var(--teal-700)}
+		.author-student{background:var(--amber-50);box-shadow:0 0 0 3px var(--amber-50);color:#7a5b06}
+		.badge{
+			display:inline-block;margin-left:.5rem;padding:.02rem .45rem;border-radius:5px;
+			background:var(--teal-50);color:var(--teal-700);font-size:.68rem;
+			font-weight:600;letter-spacing:.05em;text-transform:uppercase;vertical-align:1px;
+		}
+
+		/* ---------- join ---------- */
+		.join-list{margin:0;padding-left:1.15rem}
+		.join-list li{margin-bottom:.6rem;font-size:.95rem}
+		.join-list li:last-child{margin-bottom:0}
+		.steps{counter-reset:step;list-style:none;margin:0;padding:0}
+		.steps li{position:relative;padding-left:2.6rem;margin-bottom:1.1rem}
+		.steps li::before{
+			counter-increment:step;content:counter(step);
+			position:absolute;left:0;top:-.1rem;width:1.85rem;height:1.85rem;border-radius:50%;
+			background:var(--teal-50);color:var(--teal-700);
+			font-family:"Poppins",sans-serif;font-weight:600;font-size:.85rem;
+			display:grid;place-items:center;
+		}
+		.contact-card{
+			display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+			gap:1.25rem;background:var(--teal-50);border:1px solid var(--teal-100);
+			border-radius:var(--radius);padding:1.6rem;margin-top:2.5rem;
+		}
+		.contact-card p{margin:0}
+
+		/* ---------- footer ---------- */
+		footer{background:var(--surface);border-top:1px solid var(--line);padding:2.75rem 0}
+		.foot{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:center}
+		.foot .brand img{width:38px;height:38px}
+		.foot small{color:var(--muted);font-size:.85rem}
+	</style>
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "ResearchOrganization",
+	  "name": "Human-Computer Interaction Lab",
+	  "alternateName": "HCI Lab",
+	  "url": "https://www.cprnhl.com/hcilab/",
+	  "logo": "https://www.cprnhl.com/hcilab/assets/img/logo-mark.png",
+	  "image": "https://www.cprnhl.com/hcilab/assets/img/social-card.jpg",
+	  "description": "The Human-Computer Interaction Lab at Northern Kentucky University researches user experience, artificial intelligence, and assistive technology.",
+	  "email": "caporusson1@nku.edu",
+	  "parentOrganization": {
+	    "@type": "CollegeOrUniversity",
+	    "name": "Northern Kentucky University",
+	    "url": "https://www.nku.edu/"
+	  },
+	  "location": {
+	    "@type": "Place",
+	    "name": "Griffin Hall 342",
+	    "address": {
+	      "@type": "PostalAddress",
+	      "streetAddress": "Griffin Hall 342, 1 Nunn Drive",
+	      "addressLocality": "Highland Heights",
+	      "addressRegion": "KY",
+	      "postalCode": "41099",
+	      "addressCountry": "US"
+	    }
+	  },
+	  "employee": {
+	    "@type": "Person",
+	    "name": "Nicholas Caporusso",
+	    "jobTitle": "Associate Professor",
+	    "email": "caporusson1@nku.edu",
+	    "affiliation": "Northern Kentucky University"
+	  },
+	  "knowsAbout": [
+	    "Human-computer interaction",
+	    "User experience research",
+	    "Artificial intelligence",
+	    "Large language models",
+	    "Assistive technology",
+	    "Accessibility"
+	  ]
+	}
+	</script>
+</head>
 <body>
-		<section class="container text-center my-5" style="min-height:100vh">
-			<img src="assets/img/logo.png" style="max-width:200px" class="m-3" />
-			<p class="fw-bold">Human-Computer Interaction Lab</p>
-			<div class="menu mb-3 text-center">
-				<a href="#projects">Projects</a> | <a href="#people">People</a> | <a href="#publications">Publications</a> | <a href="#join">Join</a> | <a href="https://github.com/NKU-HCI-lab/public_hci-lab-resources" target="_blank">Resources</a>
-			</div>
-			<div class="row justify-content-md-center">
-				<div class="col-12 col-md-8 mt-5">
-					<p class="lead">The Human-Computer Interaction Lab is dedicated to exploring innovative ways to understand and enhance interaction between humans and computers. Through interdisciplinary research, we strive to improve user experiences, interface design, and the usability of technology across various domains.</p>
-					<p class="fw-semibold">The lab is located at Northern Kentucky University, in Griffin Hall 342</p> 
-				</div>
-			</div>
-		</section>
-		<hr class="m-0 p-0" />
-		<section id="projects" class="bg-gray py-3" style="min-height:100vh">
-    <div class="container text-center">
-      <h2 class="fw-bold">Projects</h2>
-      <div class="row justify-content-md-center" id="projects-container"></div>
-    </div>
-  </section>
-  <hr class="p-0 m-0" />
-  <section id="people" class="bg-white py-5">
-    <div class="container text-center">
-      <h2 class="fw-bold">People</h2>
 
-				<div class="row justify-content-md-center">
-					<div class="col-12 col-md-4 mb-4">
-						<div class="card">
-							<img src="assets/img/nicholascaporusso.jpg" class="card-img-top" />
-							<div class="card-body">
-								<h6 class="card-title fw-bold">Dr. Nicholas Caporusso</h6>
-								<p class="card-text">Associate Professor<br />School of Computing and Analytics</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-2 mb-4">
-						<div class="card">
-							<img src="assets/img/einstein.jpg" class="card-img-top" />
-							<div class="card-body">
-								<h6 class="card-title fw-bold">Einstein, Puph.D.</h6>
-								<p class="card-text">Lab supervisor</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			<h4 class="text-center fw-bold mt-5 mb-0">Current research assistants</h4>
-      <p>In alphabetical order</p>
-      <div class="row justify-content-md-center" id="current-students-container"></div>
-
-      <h4 class="fw-bold mt-5">Former Students / Research Assistants</h4>
-      <button id="toggleFormer" class="btn btn-outline-primary my-3">Show Former Students</button>
-      <div class="row justify-content-md-center d-none" id="former-students-container"></div>
-    </div>
-  </section>
-  <hr class="p-0 m-0" />
-<section id="publications" class="bg-gray py-5" style="min-height:100vh">
-	<div class="container my-3 text-center">
-		<h2 class="fw-bold">Publications</h2>
-		<div id="publications-list" style="text-align:left !important"></div>
+<header class="nav">
+	<div class="wrap nav-inner">
+		<a class="brand" href="#top">
+			<img src="assets/img/logo-mark.png" alt="HCI Lab logo">
+			<span>HCI Lab</span>
+		</a>
+		<button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+		<nav class="nav-links" id="navLinks">
+			<a href="#research">Research</a>
+			<a href="#projects">Projects</a>
+			<a href="#people">People</a>
+			<a href="#publications">Publications</a>
+			<a class="nav-cta" href="#join">Join the lab</a>
+		</nav>
 	</div>
-</section>
-  <hr class="p-0 m-0" />
-  <section id="join" class="bg-white py-5">
-    <div class="container text-center">
-      <h2 class="fw-bold">Join</h2>
+</header>
 
-      <div class="row justify-content-md-center text-start">
-        <div class="col-12 col-md-8">
+<main id="top">
 
-          <h4 class="fw-bold mt-4">Why join?</h4>
-          <ol>
-            <li><strong><em>Learn and work on interesting topics</em></strong>: no matter what we achieve together, you will learn something new and meaningful.</li>
-            <li><strong><em>Deliver results</em></strong>: we have a goal-oriented mindset that will provide you with meaningful personal and professional accomplishments.</li>
-            <li><strong><em>Connect and thrive</em></strong>: we work professionally, but in a relaxed environment.</li>
-          </ol>
-          <p>Have any questions? Read our <a href="https://github.com/NKU-HCI-lab/.github/blob/main/profile/pages/frequently-asked-questions.md" target="_blank">Frequently Asked Questions page</a>.</p>
+	<!-- HERO -->
+	<section class="hero">
+		<div class="narrow">
+			<img class="hero-logo" src="assets/img/logo-mark.png" alt="Human-Computer Interaction Lab">
+			<h1>Human-Computer Interaction Lab</h1>
+			<p class="lead">We explore new ways to understand and improve the interaction between people and technology &mdash; combining user experience research, artificial intelligence, and assistive technology.</p>
+			<p><span class="pill">&#128205; Northern Kentucky University &middot; Griffin Hall 342</span></p>
+			<div class="hero-actions">
+				<a class="btn btn-primary" href="#join">Join the lab</a>
+				<a class="btn btn-ghost" href="#publications">Read our publications</a>
+			</div>
+			<div class="stats">
+				<div class="stat"><b id="stat-pubs">&ndash;</b><span>Publications</span></div>
+				<div class="stat"><b id="stat-projects">5</b><span>Active projects</span></div>
+				<div class="stat"><b id="stat-alumni">&ndash;</b><span>Alumni</span></div>
+			</div>
+		</div>
+	</section>
 
-          <h4 class="fw-bold mt-4">What's expected from HCI Lab members</h4>
-          <p>The minimum expected weekly commitment is as follows:</p>
-          <ul>
-            <li><em>Research project</em>: 15 hours (full-time researcher) or 5 hours (part-time researcher)</li>
-            <li><em>Professional development</em>: 2-3 hours</li>
-            <li><em>Weekly lab meetings</em>: 1-2 hours</li>
-            <li><em>Other activities</em>: 1 hour</li>
-          </ul>
+	<!-- RESEARCH -->
+	<section id="research" class="surface">
+		<div class="wrap">
+			<div class="section-head">
+				<p class="eyebrow">What we work on</p>
+				<h2>Research areas</h2>
+				<p class="lead muted" style="max-width:62ch">Our projects sit at the intersection of people and computing, from interface design to applied machine learning.</p>
+			</div>
+			<div class="grid grid-3" id="projects-container"></div>
+		</div>
+	</section>
 
-          <h4 class="fw-bold mt-4">How to join</h4>
-          <p>First, you must <strong>fill out the <a href="https://forms.cloud.microsoft/r/xT9tW1iZkF" target="_blank" rel="noopener">member form</a></strong>.</p>
-          <p>After you get accepted into the lab, you:</p>
-          <ol>
-            <li>Should enroll in a research course: wait for further instructions from me</li>
-            <li>Will be assigned to a team/project based on your interests</li>
-          </ol>
+	<!-- PROJECTS -->
+	<section id="projects">
+		<div class="wrap">
+			<div class="section-head">
+				<p class="eyebrow">Active threads</p>
+				<h2>Projects</h2>
+				<p class="lead muted" style="max-width:64ch">Have a look through what we are working on, and follow the <a href="#publications">papers behind it</a>.</p>
+			</div>
+			<div class="grid grid-projects" id="lab-projects-container"></div>
+		</div>
+	</section>
 
-          <p class="mt-4">If you have further questions, send an email to Dr. Nicholas Caporusso (<a href="mailto:caporusson1@nku.edu">caporusson1@nku.edu</a>).</p>
+	<!-- PEOPLE -->
+	<section id="people" class="surface">
+		<div class="wrap">
+			<div class="section-head">
+				<p class="eyebrow">Who we are</p>
+				<h2>People</h2>
+			</div>
 
-        </div>
-      </div>
-    </div>
-  </section>
+			<div class="leads">
+				<div class="lead-card">
+					<img src="assets/img/nicholascaporusso.jpg" alt="Dr. Nicholas Caporusso">
+					<div>
+						<h3>Dr. Nicholas Caporusso</h3>
+						<p>Associate Professor<br>School of Computing and Analytics</p>
+						<p style="margin-top:.4rem"><a href="mailto:caporusson1@nku.edu">caporusson1@nku.edu</a></p>
+					</div>
+				</div>
+				<div class="lead-card">
+					<img src="assets/img/einstein.jpg" alt="Einstein">
+					<div>
+						<h3>Einstein, Puph.D.</h3>
+						<p>Lab supervisor</p>
+					</div>
+				</div>
+			</div>
 
-  <!-- JavaScript -->
-  <script>
-    fetch('data.json')
-      .then(res => res.json())
-      .then(data => {
-        // Projects
-        const projectsContainer = document.getElementById('projects-container');
-        data.projects.forEach(project => {
-          projectsContainer.innerHTML += `
-            <div class="col-12 col-md-4 mb-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <h6 class="card-title fw-bold">${project.title}</h6>
-                  <p class="card-text">${project.description}</p>
-                </div>
-              </div>
-            </div>`;
-        });
+			<div class="subhead">
+				<h3>Current research assistants</h3>
+				<span class="muted">In alphabetical order</span>
+			</div>
+			<div class="people-grid" id="current-students-container"></div>
 
-        // Sort students alphabetically by last name (last component of the name)
-        const lastName = name => name.trim().split(/\s+/).pop();
-        const byLastName = (a, b) =>
-          lastName(a.name).localeCompare(lastName(b.name), undefined, { sensitivity: 'base' })
-          || a.name.localeCompare(b.name, undefined, { sensitivity: 'base' });
+			<div class="subhead" style="margin-top:3rem">
+				<h3>Former students &amp; research assistants</h3>
+				<button id="toggleFormer" class="toggle-btn" style="margin-left:auto">Show alumni</button>
+			</div>
+			<div class="people-grid former hidden" id="former-students-container"></div>
+		</div>
+	</section>
 
-        // Current Students
-        const currentContainer = document.getElementById('current-students-container');
-        [...data.currentStudents].sort(byLastName).forEach(student => {
-        student.image=student.name.toLowerCase().replace(/[^a-zA-Z]+/g, '') + '.jpg';
-          currentContainer.innerHTML += `
-            <div class="col-12 col-md-3">
-              <div class="card mb-4">
-                <img src="assets/img/students/${student.image}" class="card-img-top" alt="${student.name}" />
-                <div class="card-body">
-                  <h6 class="card-title fw-bold">${student.name}</h6>
-                  <p class="card-text">${student.description}</p>
-                </div>
-              </div>
-            </div>`;
-        });
+	<!-- PUBLICATIONS -->
+	<section id="publications">
+		<div class="wrap">
+			<div class="section-head">
+				<p class="eyebrow">Selected work</p>
+				<h2>Publications</h2>
+				<p class="lead muted" id="publications-count"></p>
+			</div>
+			<div class="pub-controls" id="publications-controls"></div>
+			<div class="pub-legend">
+				<span>Key:</span>
+				<span><i class="author-pi">Lab director</i></span>
+				<span><i class="author-student">Student / research assistant</i></span>
+			</div>
+			<div id="publications-list"></div>
+		</div>
+	</section>
 
-        // Former Students (lazy)
-        const formerContainer = document.getElementById('former-students-container');
-        [...data.formerStudents].sort(byLastName).forEach(student => {
-        student.image=student.name.toLowerCase().replace(/[^a-zA-Z]+/g, '') + '.jpg';
-          formerContainer.innerHTML += `
-            <div class="col-6 col-md-2">
-              <div class="card mb-4">
-                <img data-src="assets/img/students/${student.image}" class="card-img-top lazy" alt="${student.name}" />
-                <div class="card-body">
-                  <h6 class="card-title fw-bold">${student.name}</h6>
-                  <p class="card-text">${student.description}</p>
-                </div>
-              </div>
-            </div>`;
-        });
+	<!-- JOIN -->
+	<section id="join" class="surface">
+		<div class="wrap">
+			<div class="section-head">
+				<p class="eyebrow">Work with us</p>
+				<h2>Join the lab</h2>
+				<p class="lead muted" style="max-width:62ch">We welcome curious students who want to do real research and ship real results.</p>
+			</div>
 
-        // Publications
-        const pubContainer = document.getElementById('publications-container');
-        data.publications.forEach(pub => {
-          pubContainer.innerHTML += `<p><strong>${pub.title}</strong><br>${pub.authors}<br><em>${pub.venue}</em>, ${pub.year}</p>`;
-        });
-      });
+			<div class="grid grid-3">
+				<div class="card card-hover">
+					<h3>Why join</h3>
+					<ol class="join-list">
+						<li><strong>Learn and work on interesting topics</strong> &mdash; no matter what we achieve together, you will learn something new and meaningful.</li>
+						<li><strong>Deliver results</strong> &mdash; we have a goal-oriented mindset that leads to real personal and professional accomplishments.</li>
+						<li><strong>Connect and thrive</strong> &mdash; we work professionally, in a relaxed environment.</li>
+					</ol>
+				</div>
+				<div class="card card-hover">
+					<h3>What's expected</h3>
+					<p class="muted" style="font-size:.9rem">Minimum weekly commitment:</p>
+					<ul class="join-list">
+						<li><strong>Research project</strong>: 15 hours full-time, or 5 hours part-time</li>
+						<li><strong>Professional development</strong>: 2&ndash;3 hours</li>
+						<li><strong>Weekly lab meetings</strong>: 1&ndash;2 hours</li>
+						<li><strong>Other activities</strong>: 1 hour</li>
+					</ul>
+				</div>
+				<div class="card card-hover">
+					<h3>How to join</h3>
+					<ol class="steps">
+						<li>Fill out the <a href="https://forms.cloud.microsoft/r/xT9tW1iZkF" target="_blank" rel="noopener">member form</a> &mdash; this step is required.</li>
+						<li>Once accepted, enroll in a research course; you will get instructions by email.</li>
+						<li>Get assigned to a team and project based on your interests.</li>
+					</ol>
+				</div>
+			</div>
 
-    // Lazy load former students on toggle
-    document.getElementById('toggleFormer').addEventListener('click', () => {
-      const section = document.getElementById('former-students-container');
-      section.classList.toggle('d-none');
-      if (!section.classList.contains('d-none')) {
-        document.querySelectorAll('img.lazy').forEach(img => {
-          if (!img.src) img.src = img.getAttribute('data-src');
-        });
-      }
-    });
-			let ts=document.querySelectorAll('h2');
-			for(let i=0;i<ts.length;i++){
-				let el=document.querySelector('.menu').cloneNode(true);
-				ts[i].after(el);
+			<div class="contact-card">
+				<div>
+					<h3 style="margin-bottom:.2rem">Still have questions?</h3>
+					<p class="muted" style="font-size:.93rem">Read the FAQ, or email Dr. Nicholas Caporusso directly.</p>
+				</div>
+				<div class="hero-actions" style="margin:0">
+					<a class="btn btn-ghost" href="https://github.com/NKU-HCI-lab/.github/blob/main/profile/pages/frequently-asked-questions.md" target="_blank" rel="noopener">Read the FAQ</a>
+					<a class="btn btn-primary" href="mailto:caporusson1@nku.edu">Email us</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer>
+	<div class="wrap foot">
+		<a class="brand" href="#top">
+			<img src="assets/img/logo-mark.png" alt="HCI Lab logo">
+			<span>Human-Computer Interaction Lab</span>
+		</a>
+		<small>Northern Kentucky University &middot; Griffin Hall 342 &middot; <a href="mailto:caporusson1@nku.edu">caporusson1@nku.edu</a></small>
+	</div>
+</footer>
+
+<script src="assets/publications.js"></script>
+<script>
+	// mobile nav
+	var navToggle = document.getElementById('navToggle');
+	var navLinks = document.getElementById('navLinks');
+	navToggle.addEventListener('click', function () {
+		var open = navLinks.classList.toggle('open');
+		navToggle.setAttribute('aria-expanded', open);
+	});
+	navLinks.addEventListener('click', function (e) {
+		if (e.target.tagName === 'A') navLinks.classList.remove('open');
+	});
+
+	// content from data.json
+	fetch('data.json', { cache: 'no-cache' })
+		.then(function (res) { return res.json(); })
+		.then(function (data) {
+			var esc = function (s) { return String(s).replace(/[<>]/g, ''); };
+
+			// research areas
+			document.getElementById('projects-container').innerHTML = data.projects.map(function (p) {
+				var icon = p.icon ? '<div class="card-icon"><img src="assets/img/icons/' + p.icon + '" alt=""></div>' : '';
+				return '<article class="card card-hover">' + icon +
+					'<h3>' + p.title + '</h3><p>' + p.description + '</p></article>';
+			}).join('');
+
+			var lastName = function (n) { return n.trim().split(/\s+/).pop(); };
+			var byLastName = function (a, b) {
+				return lastName(a.name).localeCompare(lastName(b.name), undefined, { sensitivity: 'base' }) ||
+					a.name.localeCompare(b.name, undefined, { sensitivity: 'base' });
+			};
+			var photo = function (n) { return n.toLowerCase().replace(/[^a-zA-Z]+/g, '') + '.jpg'; };
+			var personCard = function (s, lazy) {
+				var src = 'assets/img/students/' + photo(s.name);
+				var img = lazy
+					? '<img class="lazy" data-src="' + src + '" alt="' + esc(s.name) + '">'
+					: '<img src="' + src + '" alt="' + esc(s.name) + '" loading="lazy">';
+				return '<article class="person">' + img +
+					'<div class="info"><h4>' + s.name + '</h4><p>' + s.description + '</p></div></article>';
+			};
+
+			// current research assistants
+			var current = (data.currentStudents || []).slice().sort(byLastName);
+			document.getElementById('current-students-container').innerHTML = current.length
+				? current.map(function (s) { return personCard(s, false); }).join('')
+				: '<div class="empty" style="grid-column:1/-1">Research assistant positions for the current term are being filled &mdash; ' +
+				  '<a href="#join">apply to join the lab</a>.</div>';
+
+			// alumni
+			var former = (data.formerStudents || []).slice().sort(byLastName);
+			document.getElementById('former-students-container').innerHTML =
+				former.map(function (s) { return personCard(s, true); }).join('');
+			document.getElementById('stat-alumni').textContent = former.length;
+
+			// projects derived from the publication list
+			var box = document.getElementById('lab-projects-container');
+			var projects = data.labProjects || [];
+			if (box && projects.length) {
+				var byTitle = {};
+				if (typeof publications !== 'undefined') {
+					publications.forEach(function (pub) { byTitle[pub.title] = pub; });
+				}
+				box.innerHTML = projects.map(function (proj) {
+					var years = (proj.publications || []).map(function (t) {
+						var pub = byTitle[t];
+						if (!pub) console.warn('Project "' + proj.title + '" references an unknown publication: ' + t);
+						return pub && pub.year;
+					}).filter(Boolean);
+					var n = (proj.publications || []).length;
+					var span = years.length
+						? (Math.min.apply(null, years) === Math.max.apply(null, years)
+							? Math.min.apply(null, years)
+							: Math.min.apply(null, years) + '\u2013' + Math.max.apply(null, years))
+						: '';
+					var tags = (proj.tags || []).map(function (t) { return '<span>' + t + '</span>'; }).join('');
+					return '<article class="project-card">' +
+						'<div class="project-meta"><b>' + n + (n === 1 ? ' publication' : ' publications') + '</b>' +
+						(span ? '<span>' + span + '</span>' : '') + '</div>' +
+						'<h3>' + proj.title + '</h3>' +
+						'<p>' + proj.description + '</p>' +
+						(tags ? '<div class="project-tags">' + tags + '</div>' : '') +
+						'</article>';
+				}).join('');
+				var statProjects = document.getElementById('stat-projects');
+				if (statProjects) statProjects.textContent = projects.length;
 			}
-		</script>
-		<script src="assets/publications.js"></script>
+		})
+		.catch(function (err) { console.error('data.json could not be loaded:', err); });
+
+	// alumni toggle (lazy images)
+	document.getElementById('toggleFormer').addEventListener('click', function () {
+		var box = document.getElementById('former-students-container');
+		var shown = !box.classList.toggle('hidden');
+		this.textContent = shown ? 'Hide alumni' : 'Show alumni';
+		if (shown) {
+			box.querySelectorAll('img.lazy').forEach(function (img) {
+				if (!img.getAttribute('src')) img.src = img.getAttribute('data-src');
+			});
+		}
+	});
+</script>
+<script src="assets/publications-render.js"></script>
 </body>
 </html>
