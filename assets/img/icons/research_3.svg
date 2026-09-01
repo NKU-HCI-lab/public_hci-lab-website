@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none" role="img" aria-label="Assistive technology and inclusion">
+  <circle cx="24" cy="24" r="19" stroke="#3fa96b" stroke-width="2.4"/>
+  <g stroke="#0f8f8f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="24" cy="12.5" r="3.4"/>
+    <path d="M14.5 21h19M24 17.5v9.5M24 27l-5.5 9M24 27l5.5 9"/>
+  </g>
+</svg>

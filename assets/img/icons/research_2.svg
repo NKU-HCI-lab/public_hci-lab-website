@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none" role="img" aria-label="Artificial intelligence">
+  <g stroke="#0f8f8f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="11" y="11" width="26" height="26" rx="6"/>
+    <path d="M19 11V5M29 11V5M19 43v-6M29 43v-6M11 19H5M11 29H5M43 19h-6M43 29h-6"/>
+  </g>
+  <g stroke="#3fa96b" stroke-width="2.2" stroke-linecap="round">
+    <path d="M19 20 29 24M19 28 29 24M19 20v8"/>
+  </g>
+  <g fill="#3fa96b">
+    <circle cx="19" cy="20" r="3"/>
+    <circle cx="19" cy="28" r="3"/>
+    <circle cx="29" cy="24" r="3.3"/>
+  </g>
+</svg>

@@ -1,29 +1,22 @@
 {
   "projects": [
     {
-      "title": "Remote eye tracking",
-      "description": "Collecting and analyzing eye-tracking data without dedicated devices"
+      "icon": "research_1.svg",
+      "title": "User eXperience analysis",
+      "description": "Understanding users and designing meaningful and effective experiences"
     },
     {
-      "title": "AI-driven mental health therapist",
-      "description": "Using generative AI to support individuals with communication disabilities"
+      "icon": "research_2.svg",
+      "title": "Artificial Intelligence",
+      "description": "Exploring and applying AI and Large Language Models to solve real-world problems"
     },
     {
-      "title": "Bidding behavior analysis",
-      "description": "Understanding auction and human dynamics through auction data"
-    },
-    {
-      "title": "Data viz in teaching evaluations",
-      "description": "Improving the user experience through better data and visualization"
-    },
-    {
-      "title": "Accessible resources for the blind",
-      "description": "Increasing accessibility of everyday technology to support special needs"
+      "icon": "research_3.svg",
+      "title": "Assistive technology",
+      "description": "Developing sustainable technologies that empower people and promote inclusion"
     }
   ],
-  
-  "currentStudents": [
-  ],
+  "currentStudents": [],
   "formerStudents": [
     {
       "name": "Joseph Ampfer",
@@ -146,6 +139,107 @@
       "authors": "Doe, J., Smith, A.",
       "venue": "CHI Extended Abstracts",
       "year": 2022
+    }
+  ],
+  "labProjects": [
+    {
+      "title": "Vision-Based Interaction and Eye Tracking",
+      "description": "Turning ordinary webcams into gaze-sensing instruments. We build landmark-detection datasets and blink and iris algorithms, then apply the resulting low-cost pipelines to concussion screening, the study of medieval manuscripts, and brain-vision coordination.",
+      "tags": [
+        "Eye tracking",
+        "Computer vision",
+        "Open datasets"
+      ],
+      "publications": [
+        "Investigating Brain–Vision Coordination Using Camera-Based Eye Tracking",
+        "Using Eye-Tracking and Data Visualization to Enhance the Study of Medieval Manuscripts",
+        "A Blink Detection Algorithm for Eye-Tracking Applications Based on Facial Geometry",
+        "An Eye-Tracking Solution Using Consumer Grade Webcams for Potential Concussion Diagnosis and Evaluation",
+        "Face Mask Detection using Mediapipe Facemesh",
+        "A Landmark Detection and Iris Prediction Dataset for Gaze Tracking Research",
+        "Comparative Analysis of RGB-based Eye-Tracking for Large-Scale Human-Machine Applications"
+      ]
+    },
+    {
+      "title": "Large Language Model Behavior and Provenance",
+      "description": "Characterizing what language models actually do, and where their text comes from. Work spans strategic behavior in game-theoretic settings, model fingerprinting and de-attribution, ensembles of small models, and the role written specifications play in LLM-assisted coding.",
+      "tags": [
+        "LLMs",
+        "Game theory",
+        "Authorship attribution"
+      ],
+      "publications": [
+        "Strategic Behavior in Large Language Models: A Dataset of Game-Theoretic Interactions",
+        "Who Wrote This? Fingerprinting Large Language Models and Model Families",
+        "Can Small-Model Ensembles Compete with Larger LLMs? A Performance Evaluation Study",
+        "An Open Platform for Studying LLM Behavior in Game-Theoretic Scenarios",
+        "A Modular MCP-Based Raspberry Pi Control System with Graphical User Interface Control and Testing",
+        "LLM De-Attribution: Removing Model-Specific Signatures from Generated Text",
+        "Do Requirements Still Matter? Measuring the Impact of Specifications on LLM-Based Code Generation",
+        "Preserving Requirements-Driven Development in the Age of AI: an Empirical Evaluation of the Impact of Software Specifications in LLM-Assisted Coding"
+      ]
+    },
+    {
+      "title": "Computing Education and Teaching Analytics",
+      "description": "Studying how AI and data are changing the way computing is taught. Projects benchmark LLM-generated course material, measure adoption of collaborative live-coding tools, and analyze student evaluations of teaching at scale — from sentiment buried in public reviews to the factors that drive response behavior.",
+      "tags": [
+        "CS education",
+        "Learning analytics",
+        "LLM benchmarking"
+      ],
+      "publications": [
+        "Analyzing Student Adoption of a Collaborative Live Coding Software in a Programming Course",
+        "Benchmarking LLMs for Content Expansion: Measuring Novelty in Iterative Course Outline Generation",
+        "Evaluating Output Novelty in Iterative Prompting in Educational Content Generation",
+        "From Angry Reviews to Classroom Success: Using LLMs to Synthesize RateMyProfessors.com Data",
+        "A UTAUT-based analysis of the Adoption Factors of Student Evaluations of Teaching",
+        "Teaching Evaluations: Using Big Data Visualization to Explore Challenges and Opportunities"
+      ]
+    },
+    {
+      "title": "User Experience, Usability and Adoption",
+      "description": "Studying how people perceive, learn, and decide to adopt technology — and redesigning it when they cannot. Work covers knowledge-attitude-behavior modeling and its visualization, security perceptions of conversational-AI memory, adoption criteria for mental-health and scholarly-communication tools, tactile materials that make networking concepts accessible to visually impaired students, and the psychological effects of generative AI on creative work.",
+      "tags": [
+        "Usability",
+        "Technology adoption",
+        "Accessibility",
+        "User perception"
+      ],
+      "publications": [
+        "Visualizing the Dynamics of the KAB Model with Sankey Diagrams",
+        "Tactile Network Topologies: Facilitating Inclusive Learning for Visually Impaired Students in Computer Networking Education",
+        "Analysis of the Content of ChatGPT’s Memory: Types of Information, Security Implications, and User Perception",
+        "User Awareness of Cybersecurity Risks with ChatGPT's New “Memory\" Feature: A Knowledge-Attitude-Behavior Analysis",
+        "Patient and Therapist Adoption Criteria for Mental Health Applications",
+        "Analyzing the Potential User Adoption of Video Podcasts for Scholarly Research Dissemination",
+        "Generative Artificial Intelligence and the Emergence of Creative Displacement Anxiety"
+      ]
+    },
+    {
+      "title": "Auction Behavior Analysis",
+      "description": "Mining an extensive auction dataset for how people actually bid, and building the entity-resolution machinery needed to make that data usable. BrandNERD contributes a large brand dataset and analysis pipeline for resolving messy references, paired with a crowdsourced approach for validating the hard cases at scale.",
+      "tags": [
+        "Human dynamics",
+        "Entity resolution",
+        "Datasets"
+      ],
+      "publications": [
+        "Analyzing Human Dynamics through an Extensive Auction Dataset",
+        "BrandNERD - An Extensive Brand Dataset and Analysis Pipeline for Named Entity Resolution",
+        "A Crowdsourced Approach for Named Entity Resolution"
+      ]
+    },
+    {
+      "title": "Process Analysis and Optimization",
+      "description": "Modeling how real-world processes actually run, then improving them. We look at where constraints, sequencing, and resource use interact, and apply constraint-based methods to find the efficiency that is genuinely available — current work optimizes route-aware container loading under stack load propagation, so packing decisions hold up across an entire delivery route rather than only at the depot.",
+      "tags": [
+        "Process modeling",
+        "Optimization",
+        "Operational efficiency"
+      ],
+      "publications": [
+        "A Route-Aware Carbon Efficient Container Loading Method with Stack Load Propagation Constraints"
+      ]
     }
   ]
 }
